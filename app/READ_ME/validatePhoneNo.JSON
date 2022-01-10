@@ -1,0 +1,8 @@
+// validatePhoneNo - https://api.homegenie.com/api/customer/validatePhoneNo
+{
+    "statusCode": 200,
+    "message": "Success",
+    "data": {
+        "isRegistered": false
+    }
+}

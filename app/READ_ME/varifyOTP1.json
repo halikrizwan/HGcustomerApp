@@ -1,0 +1,54 @@
+verifyOTP1 = https://api.homegenie.com/api/customer/verifyOTP1
+{
+    "statusCode": 200,
+    "message": "Success",
+    "data": {
+        "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYxZGFkMmNlYTBkYTczZDgxY2IzYmQ4MyIsInR5cGUiOiJDVVNUT01FUiIsImlhdCI6MTY0MTczMTEyOH0.FO2u_ubGmiZV-_RpLK9P668UNnT1eU5pQdT7CvnNbPs",
+        "userDetails": {
+            "_id": "61dad2cea0da73d81cb3bd83",
+            "email": "abuh175@gmail.com",
+            "phoneNo": "565071572",
+            "countryCode": "+971",
+            "deviceType": "WEBSITE",
+            "timezone": "Asia/Calcutta",
+            "displayCompanyName": false,
+            "isMembership": false,
+            "adminRegister": false,
+            "promoCode": [],
+            "isDelete": false,
+            "uniqueCode": "IN578647",
+            "otherOption": {
+                "otherOptionDetails": null
+            },
+            "dob": null,
+            "nationality": null,
+            "AppointmentsId": [],
+            "ratingPersonNo": 0,
+            "timestamp": "2022-01-09T12:19:26.961Z",
+            "rating": 0,
+            "profilePicURL": {
+                "thumbnail": null,
+                "original": null
+            },
+            "currentLocation": [
+                17.3753,
+                78.4744
+            ],
+            "phoneVerified": true,
+            "emailVerified": false,
+            "language": "ES_MX",
+            "firstTimeLogin": false,
+            "name": "Abu Room",
+            "customerAddresses": [],
+            "favouriteGenie": [],
+            "userReferral": "HGNqCh7GmMKJ",
+            "earnedFromReferral": 0
+        },
+        "pushData": [],
+        "defaultAddressStatus": "NONE",
+        "Push_RatingPending": [],
+        "defaultAddress": [],
+        "defaultCards": null,
+        "Push_CompleteAndUnFinished": []
+    }
+}

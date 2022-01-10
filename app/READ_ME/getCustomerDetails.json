@@ -1,0 +1,52 @@
+getCustomerDetails = https://api.homegenie.com/api/customer/getcustomerDetails?email=abuh175@gmail.com
+
+{
+    "statusCode": 200,
+    "message": "Success",
+    "data": [
+        {
+            "_id": "61dad2cea0da73d81cb3bd83",
+            "email": "abuh175@gmail.com",
+            "phoneNo": "565071572",
+            "countryCode": "+971",
+            "deviceType": "WEBSITE",
+            "appVersion": "100",
+            "timezone": "Asia/Calcutta",
+            "emailVerificationToken": "018bd60138bd003c393b034994f90b84",
+            "displayCompanyName": false,
+            "isMembership": false,
+            "adminRegister": false,
+            "promoCode": [],
+            "isDelete": false,
+            "uniqueCode": "IN578647",
+            "otherOption": {
+                "otherOptionDetails": null
+            },
+            "dob": null,
+            "nationality": null,
+            "AppointmentsId": [],
+            "ratingPersonNo": 0,
+            "timestamp": "2022-01-09T12:19:26.961Z",
+            "rating": 0,
+            "profilePicURL": {
+                "thumbnail": null,
+                "original": null
+            },
+            "currentLocation": [
+                17.3753,
+                78.4744
+            ],
+            "phoneVerified": true,
+            "emailVerified": false,
+            "isBlocked": false,
+            "registrationDate": "2022-01-09T12:19:26.959Z",
+            "language": "ES_MX",
+            "firstTimeLogin": false,
+            "codeUpdatedAt": "2022-01-09T12:19:26.961Z",
+            "facebookId": null,
+            "name": "Abu Room",
+            "customerAddresses": [],
+            "deviceToken": "565071572"
+        }
+    ]
+}

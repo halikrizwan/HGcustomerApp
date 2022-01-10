@@ -1,0 +1,46 @@
+RegisterViaPhone - https://api.homegenie.com/api/customer/registerViaPhone
+{
+    "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYxZDdlYjI4ODZlNjc1MmEwMzY1MzhlYSIsInR5cGUiOiJDVVNUT01FUiIsImlhdCI6MTY0MTU0MDM5Mn0.8Ah1qrwEXnU2hTAsUrUvbpAUatastd8qkwpMlFS3EXw",
+    "userDetails": {
+        "email": "azarindia@gmail.com",
+        "phoneNo": "8973759690",
+        "countryCode": "+91",
+        "deviceType": "WEBSITE",
+        "timezone": "Asia/Calcutta",
+        "newNumber": "+91-8973759690",
+        "_id": "61d7eb2886e6752a036538ea",
+        "displayCompanyName": false,
+        "isMembership": false,
+        "adminRegister": false,
+        "promoCode": [],
+        "isDelete": false,
+        "uniqueCode": "IN578597",
+        "otherOption": {
+            "otherOptionDetails": null
+        },
+        "dob": null,
+        "nationality": null,
+        "AppointmentsId": [],
+        "ratingPersonNo": 0,
+        "timestamp": "2022-01-07T07:26:32.077Z",
+        "rating": 0,
+        "profilePicURL": {
+            "thumbnail": null,
+            "original": null
+        },
+        "currentLocation": [
+            17.3753,
+            78.4744
+        ],
+        "phoneVerified": false,
+        "emailVerified": false,
+        "language": "ES_MX",
+        "firstTimeLogin": false,
+        "name": "AzarIndia",
+        "customerAddresses": []
+    },
+    "pushData": [],
+    "Unpaid_Appointments": [],
+    "defaultAddress": [],
+    "defaultCards": null
+}
