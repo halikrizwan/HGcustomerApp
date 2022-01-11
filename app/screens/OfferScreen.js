@@ -33,7 +33,22 @@ export default function OfferScreen({ navigation }) {
             const response = await fetch('https://api.homegenie.com/api/Webapi/offers?city=Dubai&language=en');
             const json = await response.json();
             let datas = json.data.data;
-            setOfferData(datas);
+            let array = [];
+            for (obj of datas) {
+                var d = new Date(obj.promo.endTime);
+                var dm = moment(d).format("DD MMM,  YY")
+                array.push({
+                    _id: obj._id,
+                    validDate: dm,
+                    name: obj.name,
+                    image: obj.image,
+                    promoName: obj.promo.name,
+                    trending: obj.trending,
+                    soldCount: obj.soldCount,
+                })
+            }
+            console.log(array);
+            setOfferData(array);
         } catch (error) {
             console.error(error);
         } finally {
@@ -76,16 +91,23 @@ export default function OfferScreen({ navigation }) {
                                         renderItem={({ item }) => (
                                             <View style={[styles.offerBoxEach], { borderBottomWidth: 1, borderColor: '#ccc', marginTop: 15 }}>
                                                 <Image
-                                                    style={[styles.OfferImage], { width: '100%', height: 200, borderRadius: 10, resizeMode: "contain", }}
+                                                    style={[styles.OfferImage], { width: '100%', height: 200, borderRadius: 5, resizeMode: "contain", }}
                                                     source={{
                                                         uri: item.image,
                                                     }}
                                                 />
+                                                <View style={{ position: 'absolute', top: 10, left: 15, width: '35%', height: 25, backgroundColor: '#f6b700', alignItems: 'center', justifyContent: 'center' }}>
+                                                    <Text style={{ color: '#fff', fontSize: 11, fontFamily: "PoppinsM" }}>{item.soldCount} claimed already! </Text>
+                                                </View>
+                                                {item.trending ? <Image
+                                                    style={{ top: -10, right: -10, position: 'absolute' }}
+                                                    source={require("../assets/trending.png")}
+                                                /> : null}
                                                 <Text style={{ color: '#2eb0e4' }}>* Terms & Conditions</Text>
                                                 <Text style={{ color: '#2eb0e4', fontSize: 24, fontWeight: 'bold' }}>{item.name}</Text>
-                                                <Text style={{ color: '#2eb0e4', fontSize: 14, fontWeight: 'bold', marginTop: 5, marginBottom: 5 }}>{item.promo.name}</Text>
+                                                <Text style={{ color: '#2eb0e4', fontSize: 14, fontWeight: 'bold', marginTop: 5, marginBottom: 5 }}>{item.promoName}</Text>
                                                 <Text>{item.name} </Text>
-                                                <Text>Valid till date {item.promo.endTime}</Text>
+                                                <Text>Valid till date {item.validDate}</Text>
                                                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10 }}>
                                                     <Pressable
                                                         style={[styles.button, styles.buttonOpen, styles.offerCopyCode]}
