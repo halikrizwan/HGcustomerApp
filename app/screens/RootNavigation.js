@@ -21,6 +21,8 @@ import WalletScreen from './WalletScreen';
 import SettingScreen from './SettingScreen';
 import NotificationScreen from './NotificationScreen';
 import ReferEarnScreen from './ReferEarnScreen';
+import SettingAddCardScreen from './SettingAddCardScreen';
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -77,25 +79,26 @@ function AccountStackScreen() {
             <AccountStack.Screen name="WalletPage" component={WalletScreen} />
             <AccountStack.Screen name="SettingPage" component={SettingScreen} />
             <AccountStack.Screen name="NotificationPage" component={NotificationScreen} />
+            <AccountStack.Screen name="SettingAddCardPage" component={SettingAddCardScreen} />
         </AccountStack.Navigator>
     );
 }
 export default function RootNavigation() {
-    let [fontsLoaded, error] = useFonts({
-        'Poppins-Black': require('../assets/fonts/Poppins/Poppins-Black.ttf'),
-        'Poppins-Bold': require('../assets/fonts/Poppins/Poppins-Bold.ttf'),
-        'Poppins-ExtraBold': require('../assets/fonts/Poppins/Poppins-ExtraBold.ttf'),
-        'Poppins-ExtraLight': require('../assets/fonts/Poppins/Poppins-ExtraLight.ttf'),
-        'Poppins-Light': require('../assets/fonts/Poppins/Poppins-Light.ttf'),
-        'Poppins-Medium': require('../assets/fonts/Poppins/Poppins-Medium.ttf'),
-        'Poppins-Regular': require('../assets/fonts/Poppins/Poppins-Regular.ttf'),
-        'Poppins-SemiBold': require('../assets/fonts/Poppins/Poppins-SemiBold.ttf'),
-        'Poppins-Thin': require('../assets/fonts/Poppins/Poppins-Thin.ttf'),
-        'Lobster': require('../assets/fonts/Pushster/Lobster.ttf'),
-    })
-    if (!fontsLoaded) {
-        return <AppLoading />
-    }
+    // let [fontsLoaded, error] = useFonts({
+    //     'Poppins-Black': require('../assets/fonts/Poppins/Poppins-Black.ttf'),
+    //     'Poppins-Bold': require('../assets/fonts/Poppins/Poppins-Bold.ttf'),
+    //     'Poppins-ExtraBold': require('../assets/fonts/Poppins/Poppins-ExtraBold.ttf'),
+    //     'Poppins-ExtraLight': require('../assets/fonts/Poppins/Poppins-ExtraLight.ttf'),
+    //     'Poppins-Light': require('../assets/fonts/Poppins/Poppins-Light.ttf'),
+    //     'Poppins-Medium': require('../assets/fonts/Poppins/Poppins-Medium.ttf'),
+    //     'Poppins-Regular': require('../assets/fonts/Poppins/Poppins-Regular.ttf'),
+    //     'Poppins-SemiBold': require('../assets/fonts/Poppins/Poppins-SemiBold.ttf'),
+    //     'Poppins-Thin': require('../assets/fonts/Poppins/Poppins-Thin.ttf'),
+    //     'Lobster': require('../assets/fonts/Pushster/Lobster.ttf'),
+    // })
+    // if (!fontsLoaded) {
+    //     return <AppLoading />
+    // }
     return (
         <Tab.Navigator screenOptions={({ route }) => ({
             headerShown: false,

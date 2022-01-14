@@ -756,12 +756,6 @@ const styles = StyleSheet.create({
         elevation: 3,
     },
 
-    // slide: {
-    //     flex: 1,
-    //     justifyContent: 'center',
-    //     backgroundColor: 'grey',
-    // },
-
     slide1: {
         flex: 1,
         width: "100%",

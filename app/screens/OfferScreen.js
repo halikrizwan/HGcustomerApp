@@ -26,6 +26,7 @@ import Whatsapp800 from "../components/Whatsapp800";
 export default function OfferScreen({ navigation }) {
     const [isLoading, setLoading] = useState(true);
     const [modalVisible, setModalVisible] = useState(false);
+    const [modalTermsandCondition, setModalTermsandCondition] = useState(false);
     const [offerData, setOfferData] = useState([]);
 
     const getOffers = async () => {
@@ -45,9 +46,11 @@ export default function OfferScreen({ navigation }) {
                     promoName: obj.promo.name,
                     trending: obj.trending,
                     soldCount: obj.soldCount,
+                    categoryName: obj.categoryName,
+                    termsCondition: obj.tnc
                 })
             }
-            console.log(array);
+            //console.log(array);
             setOfferData(array);
         } catch (error) {
             console.error(error);
@@ -103,7 +106,11 @@ export default function OfferScreen({ navigation }) {
                                                     style={{ top: -10, right: -10, position: 'absolute' }}
                                                     source={require("../assets/trending.png")}
                                                 /> : null}
-                                                <Text style={{ color: '#2eb0e4' }}>* Terms & Conditions</Text>
+                                                <Pressable
+                                                    onPress={() => setModalTermsandCondition(true)}
+                                                >
+                                                    <Text style={{ color: '#2eb0e4' }}>* Terms & Conditions</Text>
+                                                </Pressable>
                                                 <Text style={{ color: '#2eb0e4', fontSize: 24, fontWeight: 'bold' }}>{item.name}</Text>
                                                 <Text style={{ color: '#2eb0e4', fontSize: 14, fontWeight: 'bold', marginTop: 5, marginBottom: 5 }}>{item.promoName}</Text>
                                                 <Text>{item.name} </Text>
@@ -119,6 +126,33 @@ export default function OfferScreen({ navigation }) {
                                                         <Text style={[styles.offerBooknowText]}> Book Now</Text>
                                                     </Pressable>
                                                 </View>
+                                                {/* <Modal
+                                                    animationType="fade"
+                                                    isVisible={modalTermsandCondition} hasBackdrop={true}
+                                                >
+                                                    <View >
+                                                        <View style={[styles.modalView], { padding: 15 }}>
+                                                            <View style={[styles.signupModalContainer], { borderRadius: 10, backgroundColor: '#fff' }}>
+                                                                <View style={[styles.modalHeader, styles.flexRow], { backgroundColor: '#F4F4F4', borderTopLeftRadius: 10, borderTopRightRadius: 10, padding: 20 }}>
+                                                                    <Pressable
+                                                                        style={[styles.button, styles.buttonClose]}
+                                                                        onPress={() => setModalTermsandCondition(!modalTermsandCondition)}
+                                                                    >
+                                                                        <Image
+                                                                            resizeMode="contain"
+                                                                            style={{ width: 20, height: 20 }}
+                                                                            source={require("../assets/backArrowBlack.png")}
+                                                                        />
+                                                                    </Pressable>
+                                                                    <Text style={{ alignItems: 'center', textAlign: 'center', fontSize: 24, }}>T&C - {item.categoryName} Services</Text>
+                                                                </View>
+                                                                <View style={[styles.modalBody], { alignItems: 'center', padding: 20 }}>
+                                                                    <Text>{item.termsCondition}</Text>
+                                                                </View>
+                                                            </View>
+                                                        </View>
+                                                    </View>
+                                                </Modal> */}
                                             </View>
                                         )}
                                     />
@@ -135,31 +169,28 @@ export default function OfferScreen({ navigation }) {
                     </Pressable>
                 </View>
             </ScrollView >
-            <View style={styles.centeredView}>
-                <Modal
-                    animationType="fade"
-                    transparent={true}
-                    visible={modalVisible}
-                    onRequestClose={() => {
-                        Alert.alert("Modal has been closed.");
-                        setModalVisible(!modalVisible);
-                    }}
-                >
-                    <View style={styles.centeredView}>
-                        <View style={styles.modalView}>
-                            <Text style={styles.modalText}>Promo code copied!</Text>
-                            <Pressable
-                                style={[styles.button, styles.buttonClose, styles.offerBooknow]}
-                                onPress={() => setModalVisible(!modalVisible)}
-                            >
-                                <Text style={[styles.textStyle, styles.offerBooknowText]}>Continue</Text>
-                            </Pressable>
-                        </View>
+            <Modal
+                animationType="fade"
+                transparent={true}
+                visible={modalVisible}
+                onRequestClose={() => {
+                    Alert.alert("Modal has been closed.");
+                    setModalVisible(!modalVisible);
+                }}
+            >
+                <View style={styles.centeredView}>
+                    <View style={styles.modalView}>
+                        <Text style={styles.modalText}>Promo code copied!</Text>
+                        <Pressable
+                            style={[styles.button, styles.buttonClose, styles.offerBooknow]}
+                            onPress={() => setModalVisible(!modalVisible)}
+                        >
+                            <Text style={[styles.textStyle, styles.offerBooknowText]}>Continue</Text>
+                        </Pressable>
                     </View>
-                </Modal>
-            </View>
+                </View>
+            </Modal>
         </SafeAreaView >
-
     );
 };
 
@@ -284,24 +315,8 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 4,
         elevation: 5,
-        width: '70%'
+        width: '80%'
     },
-    // button: {
-    //     borderRadius: 20,
-    //     padding: 10,
-    //     elevation: 2
-    // },
-    // buttonOpen: {
-    //     backgroundColor: "#F194FF",
-    // },
-    // buttonClose: {
-    //     backgroundColor: "#2196F3",
-    // },
-    // textStyle: {
-    //     color: "white",
-    //     fontWeight: "bold",
-    //     textAlign: "center"
-    // },
     modalText: {
         marginBottom: 15,
         textAlign: "center"
