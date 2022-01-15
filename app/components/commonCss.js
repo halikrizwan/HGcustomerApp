@@ -26,7 +26,7 @@ module.exports = {
     brandBG: { backgroundColor: '#2eb0e4' },
     liteBlueBG: { backgroundColor: '#eff7fc' },
     yellowBG: { backgroundColor: '#f6b700' },
-    liteYellowBG: { cbackgroundColorolor: '#fffcf1' },
+    liteYellowBG: { backgroundColor: '#fffcf1' },
     blackBG: { backgroundColor: '#525252' },
     liteBlackBG: { backgroundColor: '#7e7e7e' },
     greyBG: { backgroundColor: '#bababa' },
@@ -177,7 +177,7 @@ module.exports = {
         justifyContent: 'center',
         borderRadius: 10
     },
-    //modal-css
+    //modal-css-start
     centeredView: {
         flex: 1,
         justifyContent: "center",
@@ -206,4 +206,5 @@ module.exports = {
         color: '#60604E',
         fontSize: 18
     }
+    //modal-css-ends
 }

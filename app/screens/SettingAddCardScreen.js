@@ -13,13 +13,14 @@ import {
     TouchableOpacity,
     Pressable,
     Alert,
-    FlatList
+    FlatList,
+    TouchableHighlight
 } from "react-native";
 import Modal from 'react-native-modal';
 import SocialMedia from "../components/SocialMedia";
 import Whatsapp800 from "../components/Whatsapp800";
 import ModalComingSoon from "../components/ModalComingSoon";
-import css, { flexDCSB } from '../components/commonCss';
+import css from '../components/commonCss';
 
 
 
@@ -59,6 +60,14 @@ export default function SettingAddCardScreen({ navigation }) {
                                     <Pressable style={[css.blueBtn]}>
                                         <Text style={[css.whiteC, css.f16, css.textCenter]}>+ ADD CARD</Text>
                                     </Pressable>
+                                    <Pressable style={styles.button}>
+                                        <Text style={styles.text}>Add Card</Text>
+                                    </Pressable>
+                                    <View style={styles.inputsContainer}>
+                                        <TouchableHighlight style={styles.fullWidthButton} >
+                                            <Text style={styles.fullWidthButtonText}>Submit</Text>
+                                        </TouchableHighlight>
+                                    </View>
                                 </View>
                             </View>
                         </View>
@@ -115,4 +124,37 @@ const styles = StyleSheet.create({
         shadowColor: "#52006A",
         color: "#fff",
     },
+    // button: {
+    //     alignItems: 'center',
+    //     justifyContent: 'center',
+    //     paddingVertical: 12,
+    //     paddingHorizontal: 32,
+    //     borderRadius: 4,
+    //     elevation: 3,
+    //     backgroundColor: 'black',
+    //     alignSelf: 'stretch',
+    //     width: '100%'
+    // },
+    // text: {
+    //     fontSize: 16,
+    //     lineHeight: 21,
+    //     fontWeight: 'bold',
+    //     letterSpacing: 0.25,
+    //     color: 'white',
+    // },
+    // inputsContainer: {
+    //     flex: 1
+    // },
+    // fullWidthButton: {
+    //     backgroundColor: 'blue',
+    //     height: 70,
+    //     flexDirection: 'row',
+    //     justifyContent: 'center',
+    //     alignItems: 'center',
+    //     alignSelf: 'stretch'
+    // },
+    // fullWidthButtonText: {
+    //     fontSize: 24,
+    //     color: 'white'
+    // }
 });
