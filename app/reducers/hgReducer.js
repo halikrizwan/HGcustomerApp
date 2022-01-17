@@ -1,12 +1,12 @@
-import { GET_CUSTOMER_DETAILS, GET_LOGIN, GET_OFFERS, GET_POPULAR_SERVICE, REGISTER_VIA_PHONE, VERIFY_OTP, GET_ERROR } from "./types"; "./types";
+import { GET_CUSTOMER_DETAILS, GET_LOGIN, GET_OFFERS, GET_POPULAR_SERVICE, REGISTER_VIA_PHONE, VERIFY_OTP, GET_ERROR } from "../actions/types";
 
 const initialState = {
-    getCustomerDetails = [],
-    getLogin = [],
-    getOffers = [],
-    getPopularService = [],
-    registerViaPhone = [],
-    verifyOtp = [],
+    getCustomerDetails : [],
+    getLogin : [],
+    getOffers : [],
+    getPopularService : [],
+    registerViaPhone : [],
+    verifyOtp : [],
 }
 
 export default function(state = initialState,action){
