@@ -14,6 +14,8 @@ import {
 } from "react-native";
 import SocialMedia from "../components/SocialMedia";
 import Whatsapp800 from "../components/Whatsapp800";
+import StatusBarAll from "../components/StatusBar";
+import css from "../components/commonCss";
 
 export default function CategoryScreen({ navigation }) {
     return (

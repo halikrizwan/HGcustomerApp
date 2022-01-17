@@ -19,6 +19,7 @@ module.exports = {
     liteBlackC: { color: '#7e7e7e' },
     greyC: { color: '#bababa' },
     liteGreyC: { color: '#F4F4F4' },
+    ltGrayC: { color: '#d1d1d150' },
     lGreyC: { color: '#60604E' },
     whiteC: { color: '#fff' },
     //colors-ends
@@ -29,12 +30,12 @@ module.exports = {
     liteYellowBG: { backgroundColor: '#fffcf1' },
     blackBG: { backgroundColor: '#525252' },
     liteBlackBG: { backgroundColor: '#7e7e7e' },
-    greyBG: { backgroundColor: '#bababa' },
     liteGreyBG: { backgroundColor: '#F4F4F4' },
+    ltGrayBG: { backgroundColor: '#d1d1d150' },
+    lGreyBG: { backgroundColor: '#60604E' },
     whiteBG: { backgroundColor: '#fff' },
     //bg-ends
     section: {
-        flex: 1,
         fontFamily: 'PoppinsR',
         fontSize: 14,
     },
@@ -43,7 +44,7 @@ module.exports = {
     },
     flexDR: {
         flexDirection: "row",
-        flex: 1,
+        //flex: 1,
     },
     flexDC: {
         flexDirection: "column",
@@ -108,9 +109,12 @@ module.exports = {
         borderRadius: 30,
     },
     //borderR100: { borderRadius: '100%' },
-    imgFull: {
-        width: "100%",
-    },
+    imgFull: { width: "100%", },
+    img90: { width: "90%" },
+    img80: { width: "80%" },
+    img70: { width: "70%" },
+    img60: { width: "60%" },
+    img50: { width: "50%" },
     img50: { width: 50, height: 50 },
     img100: { width: 100, height: 100 },
     img150: { width: 150, height: 150 },
@@ -150,7 +154,20 @@ module.exports = {
     f16: { fontSize: 16 },
     f18: { fontSize: 18 },
     f24: { fontSize: 24 },
+    f30: { fontSize: 30 },
     //extra-css
+    header: {
+        width: "100%",
+        height: 70,
+        paddingLeft: 20,
+        backgroundColor: "#2eb0e4",
+        justifyContent: "center",
+        borderBottomLeftRadius: 30,
+        borderBottomRightRadius: 30,
+        elevation: 10,
+        shadowColor: "#000",
+        color: "#fff",
+    },
     headerTitle: {
         fontSize: 18,
         fontFamily: 'PoppinsSB',
@@ -205,6 +222,9 @@ module.exports = {
         textAlign: "center",
         color: '#60604E',
         fontSize: 18
+    },
+    Text: {
+        fontFamily: 'PoppinsR'
     }
     //modal-css-ends
 }

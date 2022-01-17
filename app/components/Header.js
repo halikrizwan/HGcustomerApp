@@ -48,21 +48,21 @@ const Header = (props) => {
 const styles = StyleSheet.create({
   header: {
     width: "100%",
-    height: 110,
-    paddingTop: 26,
+    height: 80,
+    //paddingTop: 26,
     backgroundColor: "#2eb0e4",
     alignItems: "center",
     justifyContent: "center",
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
-    elevation: 5,
-    shadowColor: "#52006A",
-    fontFamily: 'Lobster',
+    elevation: 10,
+    shadowColor: "#000",
+    fontFamily: 'PoppinsM',
   },
   headerTitle: {
     color: "black",
     fontSize: 18,
-    fontFamily: 'Lobster',
+    fontFamily: 'PoppinsM',
   },
   searchBoxFull: {
     backgroundColor: "#fff",
@@ -70,18 +70,18 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 30,
     flexDirection: "row",
-    fontFamily: 'Lobster',
+    fontFamily: 'PoppinsM',
   },
   headerDropDown: {
     width: "33%",
     paddingLeft: 10,
-    fontFamily: 'Lobster',
+    fontFamily: 'PoppinsM',
   },
   headerDropdownPicker: {
     borderColor: "rgba(158, 150, 150, .0)",
     width: "100%",
     borderRadius: 30,
-    fontFamily: 'Lobster',
+    fontFamily: 'PoppinsM',
   },
   headerSearchInput: {
     alignItems: "center",
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     borderLeftWidth: 1,
     borderLeftColor: "#ccc",
     padding: 10,
-    fontFamily: 'Lobster',
+    fontFamily: 'PoppinsM',
   },
   SearchInputIcon: {
     marginRight: 10,

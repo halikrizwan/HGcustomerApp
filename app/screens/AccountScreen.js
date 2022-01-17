@@ -19,6 +19,8 @@ import { useForm } from 'react-hook-form';
 import Modal from 'react-native-modal';
 import SocialMedia from "../components/SocialMedia";
 import Whatsapp800 from "../components/Whatsapp800";
+import StatusBarAll from "../components/StatusBar";
+import css from "../components/commonCss";
 import CountryPicker from 'rn-country-picker';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -188,7 +190,8 @@ const AccountScreen = ({ navigation }) => {
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
-            <View style={styles.header}>
+            <StatusBarAll />
+            <View style={css.header}>
                 <View style={styles.flexRow}>
                     <TouchableOpacity
                         style={[styles.textWhite, styles.backButton]}
@@ -200,7 +203,7 @@ const AccountScreen = ({ navigation }) => {
                             source={require("../assets/backArrow.png")}
                         />
                     </TouchableOpacity>
-                    <Text style={[styles.headerTitle]}>My Accounts</Text>
+                    <Text style={[css.headerTitle]}>My Accounts</Text>
                 </View>
             </View>
             {(() => {
@@ -932,15 +935,14 @@ const styles = StyleSheet.create({
     },
     header: {
         width: "100%",
-        height: 120,
-        paddingTop: 36,
+        height: 70,
         paddingLeft: 20,
         backgroundColor: "#2eb0e4",
         justifyContent: "center",
         borderBottomLeftRadius: 30,
         borderBottomRightRadius: 30,
-        elevation: 5,
-        shadowColor: "#52006A",
+        elevation: 10,
+        shadowColor: "#000",
         color: "#fff",
     },
     headerTitle: {

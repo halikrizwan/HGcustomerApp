@@ -55,3 +55,4 @@ MISSING ICONS:
 Refer & Earn - OfferPage
 modal back arrow - register and login page
 add card icon - Add card page
+close icon - BookingPage

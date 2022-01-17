@@ -1,6 +1,5 @@
 import React, { Component, useState, useEffect } from "react";
 import {
-    StatusBar,
     StyleSheet,
     View,
     Text,
@@ -16,57 +15,52 @@ import {
     Pressable,
     Alert,
     FlatList,
+    SafeAreaViewDecider,
+    VirtualizedList,
 } from "react-native";
 import Modal from 'react-native-modal';
+import { Searchbar } from 'react-native-paper';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import SocialMedia from "../components/SocialMedia";
 import Whatsapp800 from "../components/Whatsapp800";
 import ModalComingSoon from "../components/ModalComingSoon";
-import css, { alignCenter } from '../components/commonCss';
-
-
+import css, { alignCenter, spaceT5 } from '../components/commonCss';
+import StatusBarAll from "../components/StatusBar";
+import GetgenieCategories from "../components/GetgenieScreens/GetgenieCategories";
+let genie = 'cat';
+const expr = 'Papayas';
 export default function GetgenieScreen({ navigation }) {
-    var [isPress, setIsPress] = React.useState(false);
-
-    const touchProps = {
-        activeOpacity: 1,
-        underlayColor: 'blue',
-        style: isPress ? styles.btnPress : styles.btnNormal,
-        onHideUnderlay: () => setIsPress(false),
-        onShowUnderlay: () => setIsPress(true),
-        onPress: () => console.log('HELLO'),
-    };
+    const [searchQuery, setSearchQuery] = React.useState('');
+    const onChangeSearch = query => setSearchQuery(query);
     return (
-        <SafeAreaView style={{ flex: 1 }}>
-            <StatusBar animated={true}
-                backgroundColor="#2eb0e4"
-                barStyle='dark-content'
-                showHideTransition='fade'
-            />
-            <View style={[css.section]}>
-                <View style={[css.container, css.liteBlueBG, css.flexDRSE]}>
-                    <TouchableHighlight style={[styles.categoryBtn]}><Text style={[styles.categoryBtnText]}>Daily Utilities</Text></TouchableHighlight>
-                    <TouchableHighlight style={[styles.categoryBtn]}><Text style={[styles.categoryBtnText]}>Lifestyle & Decor</Text></TouchableHighlight>
-                    <TouchableHighlight style={[styles.categoryBtn]}><Text style={[styles.categoryBtnText]}>Health & Wellness</Text></TouchableHighlight>
-                    <TouchableHighlight style={[styles.categoryBtn]}><Text style={[styles.categoryBtnText]}>Others</Text></TouchableHighlight>
-                </View>
-            </View>
-        </SafeAreaView>
+        <SafeAreaView>
+            <StatusBarAll />
+            {genie == 'cat' ? <View><Text>cat</Text></View> : <View><Text>nocat</Text></View>}
+            <GetgenieCategories />
+
+            switch(expr) {
+                'case' 'Oranges':
+            console.log('Oranges are $0.59 a pound.');
+            break;
+            case 'Mangoes':
+            case 'Papayas':
+            console.log('Mangoes and papayas are $2.79 a pound.');
+            // expected output: "Mangoes and papayas are $2.79 a pound."
+            break;
+            default:
+            console.log(`Sorry, we are out of ${expr}.`);
+                }
+
+        </SafeAreaView >
     );
 }
-
 const styles = StyleSheet.create({
-    categoryBtn: {
-        backgroundColor: '#fff',
-        padding: 5,
-        borderRadius: 10,
-        borderColor: '#d1d1d1',
-        borderWidth: 1,
-        height: 60,
-        width: '24%',
-        justifyContent: 'center',
-        alignItems: 'center'
+    activeBtn: {
+        backgroundColor: '#2eb0e4',
+        borderColor: '#2eb0e4'
     },
-    categoryBtnText: {
-        flexWrap: 'wrap', fontSize: 18, textAlign: 'center'
+    activeText: {
+        color: '#fff',
     }
 })

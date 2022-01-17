@@ -14,6 +14,7 @@ import {
     ImageBackground,
     ActivityIndicator,
     Pressable,
+    StatusBar
 } from "react-native";
 import Swiper from "react-native-swiper";
 import { SwiperFlatList } from "react-native-swiper-flatlist";
@@ -23,6 +24,7 @@ import { useFonts } from "expo-font";
 import Header from "../components/Header";
 import colors from "../components/AllColors";
 import Whatsapp800 from "../components/Whatsapp800";
+import StatusBarAll from "../components/StatusBar";
 
 export default function HomeScreen({ navigation }) {
     const [isLoading, setLoading] = useState(true);
@@ -78,6 +80,7 @@ export default function HomeScreen({ navigation }) {
     return (
 
         <SafeAreaView style={{ flex: 1 }}>
+            <StatusBar />
             <Header />
             <ScrollView style={styles.ScrollView}>
                 <View>

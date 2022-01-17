@@ -20,6 +20,8 @@ import {
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import { AccordionList } from "accordion-collapse-react-native";
 import { Separator } from 'native-base';
+import StatusBarAll from "../components/StatusBar";
+import css from "../components/commonCss";
 
 const FirstRoute = () => (
     <View style={[styles.scene, styles.bookingTabs]}>
@@ -86,7 +88,8 @@ export default function SupportScreen({ navigation }) {
     );
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: "#FAFBFF" }}>
-            <View style={styles.header}>
+            <StatusBarAll />
+            <View style={css.header}>
                 <View style={styles.flexRow}>
                     <TouchableOpacity
                         style={[styles.textWhite, styles.backButton]}

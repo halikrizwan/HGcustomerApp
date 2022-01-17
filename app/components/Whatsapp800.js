@@ -1,4 +1,4 @@
-import { StatusBar } from "expo-status-bar";
+//import { StatusBar } from "expo-status-bar";
 import React from "react";
 import {
   StyleSheet,
@@ -25,8 +25,6 @@ const Whatsapp800 = (props) => {
       <TouchableOpacity onPress={() => Linking.openURL("tel:00971800443643")}>
         <Image source={require("../assets/800.png")} />
       </TouchableOpacity>
-      {/* <Image source={require("../assets/whatsapp.png")} />
-      <Image source={require("../assets/800.png")} /> */}
     </View>
   );
 };

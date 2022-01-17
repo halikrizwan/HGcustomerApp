@@ -20,6 +20,8 @@ import moment from 'moment';
 import 'moment-timezone';
 import SocialMedia from "../components/SocialMedia";
 import Whatsapp800 from "../components/Whatsapp800";
+import StatusBarAll from "../components/StatusBar";
+import css from "../components/commonCss";
 
 
 
@@ -64,7 +66,8 @@ export default function OfferScreen({ navigation }) {
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
-            <View style={styles.header}>
+            <StatusBarAll />
+            <View style={css.header}>
                 <View style={styles.flexRow}>
                     <TouchableOpacity
                         style={[styles.textWhite, styles.backButton]}
@@ -76,7 +79,7 @@ export default function OfferScreen({ navigation }) {
                             source={require("../assets/backArrow.png")}
                         />
                     </TouchableOpacity>
-                    <Text style={styles.headerTitle}>OFFERS</Text>
+                    <Text style={css.headerTitle}>OFFERS</Text>
                 </View>
             </View>
             <ScrollView style={styles.ScrollView}>

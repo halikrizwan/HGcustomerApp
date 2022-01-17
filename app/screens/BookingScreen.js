@@ -16,6 +16,8 @@ import {
     Pressable,
 } from "react-native";
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
+import StatusBarAll from "../components/StatusBar";
+import css from "../components/commonCss";
 
 const FirstRoute = ({ navigation }) => (
     <View style={[styles.scene, styles.bookingTabs]}>
@@ -103,7 +105,8 @@ export default function BookingScreen({ navigation }) {
     );
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: "#FAFBFF" }}>
-            <View style={styles.header}>
+            <StatusBarAll />
+            <View style={css.header}>
                 <View style={styles.flexRow}>
                     <TouchableOpacity
                         style={[styles.textWhite, styles.backButton]}

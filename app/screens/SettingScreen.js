@@ -20,6 +20,7 @@ import SocialMedia from "../components/SocialMedia";
 import Whatsapp800 from "../components/Whatsapp800";
 import ModalComingSoon from "../components/ModalComingSoon";
 import css from '../components/commonCss';
+import StatusBarAll from "../components/StatusBar";
 
 
 
@@ -34,7 +35,8 @@ export default function SettingScreen({ navigation }) {
 
     return (
         <SafeAreaView style={[css.whiteBG], { flex: 1, backgroundColor: "#fff" }}>
-            <View style={styles.header}>
+            <StatusBarAll />
+            <View style={css.header}>
                 <View style={css.flexDR}>
                     <TouchableOpacity
                         style={[css.whiteC, css.backButton]}

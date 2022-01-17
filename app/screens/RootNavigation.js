@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { Button, View, Text, Image, SafeAreaView, StyleSheet } from 'react-native';
-// import { SafeAreaProvider } from 'react-native-safe-area-context';
-// import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useFonts } from "expo-font";
@@ -38,14 +36,12 @@ function HomeStackScreen() {
             <HomeStack.Screen name="HomePage" component={HomeScreen} />
             <HomeStack.Screen name="BookingPage" component={BookingScreen} />
             <HomeStack.Screen name="CategoryPage" component={CategoryScreen} />
-            {/* <HomeStack.Screen name="GetgeniePage" component={GetgenieScreen} /> */}
         </HomeStack.Navigator>
     );
 }
 function BookingsStackScreen() {
     return (
         <BookingsStack.Navigator screenOptions={{ headerShown: false }}>
-            {/* <BookingsStack.Screen name="LoginPage" component={LoginScreen} /> */}
             <BookingsStack.Screen name="BookingPage" component={BookingScreen} />
         </BookingsStack.Navigator>
     );
@@ -84,21 +80,6 @@ function AccountStackScreen() {
     );
 }
 export default function RootNavigation() {
-    // let [fontsLoaded, error] = useFonts({
-    //     'Poppins-Black': require('../assets/fonts/Poppins/Poppins-Black.ttf'),
-    //     'Poppins-Bold': require('../assets/fonts/Poppins/Poppins-Bold.ttf'),
-    //     'Poppins-ExtraBold': require('../assets/fonts/Poppins/Poppins-ExtraBold.ttf'),
-    //     'Poppins-ExtraLight': require('../assets/fonts/Poppins/Poppins-ExtraLight.ttf'),
-    //     'Poppins-Light': require('../assets/fonts/Poppins/Poppins-Light.ttf'),
-    //     'Poppins-Medium': require('../assets/fonts/Poppins/Poppins-Medium.ttf'),
-    //     'Poppins-Regular': require('../assets/fonts/Poppins/Poppins-Regular.ttf'),
-    //     'Poppins-SemiBold': require('../assets/fonts/Poppins/Poppins-SemiBold.ttf'),
-    //     'Poppins-Thin': require('../assets/fonts/Poppins/Poppins-Thin.ttf'),
-    //     'Lobster': require('../assets/fonts/Pushster/Lobster.ttf'),
-    // })
-    // if (!fontsLoaded) {
-    //     return <AppLoading />
-    // }
     return (
         <Tab.Navigator screenOptions={({ route }) => ({
             headerShown: false,

@@ -1,20 +1,3 @@
-// import * as React from 'react';
-// import { Button, View, Text, Image, SafeAreaView } from 'react-native';
-
-
-
-// export default function OfferScreen({ navigation }) {
-//     return (
-//         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-//             <Text>AccountScreen Screen</Text>
-//             <Button title="Go to Bookings page" onPress={() => navigation.navigate('BookingPage')} />
-//             <Button title="Go to Support page" onPress={() => navigation.navigate('SupportPage')} />
-//             <Button title="Go to Offers page" onPress={() => navigation.navigate('OfferPage')} />
-//             <Button title="Go to Wallet page" onPress={() => navigation.navigate('WalletPage')} />
-//             <Button title="Go to Settings page" onPress={() => navigation.navigate('SettingPage')} />
-//         </View>
-//     );
-// }
 import React, { Component, useState } from "react";
 import {
     StyleSheet,
@@ -34,12 +17,15 @@ import {
 } from "react-native";
 import SocialMedia from "../components/SocialMedia";
 import Whatsapp800 from "../components/Whatsapp800";
+import StatusBarAll from "../components/StatusBar";
+import css from "../components/commonCss";
 
 export default function ReferEarnScreen({ navigation }) {
     const [modalVisible, setModalVisible] = useState(false);
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
-            <View style={styles.header}>
+            <StatusBarAll />
+            <View style={css.header}>
                 <View style={styles.flexRow}>
                     <TouchableOpacity
                         style={[styles.textWhite, styles.backButton]}
@@ -51,7 +37,7 @@ export default function ReferEarnScreen({ navigation }) {
                             source={require("../assets/backArrow.png")}
                         />
                     </TouchableOpacity>
-                    <Text style={styles.headerTitle}>REFER and EARN</Text>
+                    <Text style={css.headerTitle}>REFER and EARN</Text>
                 </View>
             </View>
             <ScrollView style={styles.ScrollView}>

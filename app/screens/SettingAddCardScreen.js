@@ -21,6 +21,7 @@ import SocialMedia from "../components/SocialMedia";
 import Whatsapp800 from "../components/Whatsapp800";
 import ModalComingSoon from "../components/ModalComingSoon";
 import css from '../components/commonCss';
+import StatusBarAll from "../components/StatusBar";
 
 
 
@@ -35,7 +36,8 @@ export default function SettingAddCardScreen({ navigation }) {
 
     return (
         <SafeAreaView>
-            <View style={styles.header}>
+            <StatusBarAll />
+            <View style={css.header}>
                 <View style={css.flexDR}>
                     <TouchableOpacity
                         style={[css.whiteC, css.backButton]}
@@ -53,7 +55,7 @@ export default function SettingAddCardScreen({ navigation }) {
                 <ScrollView>
                     <View style={[css.section]}>
                         <View style={[css.container]}>
-                            <View style={[flexDCSB, css.alignCenter]}>
+                            <View style={[css.flexDCSB, css.alignCenter]}>
                                 <View><Text style={[css.f18, css.textCenter, css.spaceT20]}>ADD CARD</Text></View>
                                 <View style={[css.imgBR150, css.whiteBG, css.alignCenter]}><Image style={css.img100} source={require('../assets/iconAddCard.png')} /></View>
                                 <View>

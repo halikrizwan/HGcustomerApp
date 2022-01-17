@@ -8,11 +8,6 @@ import { useFonts } from 'expo-font';
 import RootNavigation from './app/screens/RootNavigation';
 
 export default function App() {
-  // return (
-  //   <NavigationContainer>
-  //     <RootNavigation />
-  //   </NavigationContainer>
-  // );
   let [fontsLoaded] = useFonts({
     'Lobster': require('./app/assets/fonts/Pushster/Lobster.ttf'),
     'PoppinsBL': require('./app/assets/fonts/Poppins/Poppins-Black.ttf'),
