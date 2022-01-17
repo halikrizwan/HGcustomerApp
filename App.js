@@ -4,6 +4,8 @@ import { StyleSheet } from "react-native";
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
+import store from "./store";
+import { Provider as StoreProvider } from 'react-redux';
 
 import RootNavigation from './app/screens/RootNavigation';
 
@@ -29,9 +31,11 @@ export default function App() {
     return <AppLoading />;
   } else {
     return (
-      <NavigationContainer>
-        <RootNavigation />
-      </NavigationContainer>
+      <StoreProvider store={store}>
+        <NavigationContainer>
+          <RootNavigation />
+        </NavigationContainer>
+      </StoreProvider>
     );
   }
 }
